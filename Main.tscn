@@ -16,6 +16,4 @@ margin_bottom = 1060.0
 rect_min_size = Vector2( 600, 600 )
 
 [node name="Hbox" type="HBoxContainer" parent="Vbox"]
-margin_top = 900.0
 margin_right = 1880.0
-margin_bottom = 1040.0
