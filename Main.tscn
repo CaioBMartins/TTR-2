@@ -22,5 +22,6 @@ rect_scale = Vector2( 2, 1 )
 
 [node name="Playing Area" type="HBoxContainer" parent="Vbox"]
 margin_top = 940.0
-margin_right = 1920.0
+margin_right = 960.0
 margin_bottom = 1080.0
+rect_scale = Vector2( 2, 1 )
