@@ -3,17 +3,24 @@
 [node name="Main" type="MarginContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_constants/margin_right = 20
-custom_constants/margin_top = 20
-custom_constants/margin_left = 20
-custom_constants/margin_bottom = 20
 
 [node name="Vbox" type="VBoxContainer" parent="."]
-margin_left = 20.0
-margin_top = 20.0
-margin_right = 1900.0
-margin_bottom = 1060.0
+margin_right = 1920.0
+margin_bottom = 1080.0
 rect_min_size = Vector2( 600, 600 )
 
-[node name="Hbox" type="HBoxContainer" parent="Vbox"]
-margin_right = 1880.0
+[node name="Scores" type="HBoxContainer" parent="Vbox"]
+margin_right = 100.0
+margin_bottom = 200.0
+rect_scale = Vector2( 2, 1 )
+
+[node name="Decks" type="VBoxContainer" parent="Vbox"]
+margin_top = 200.0
+margin_right = 100.0
+margin_bottom = 940.0
+rect_scale = Vector2( 2, 1 )
+
+[node name="Playing Area" type="HBoxContainer" parent="Vbox"]
+margin_top = 940.0
+margin_right = 1920.0
+margin_bottom = 1080.0
