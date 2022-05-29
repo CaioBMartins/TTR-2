@@ -4,24 +4,41 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Vbox" type="VBoxContainer" parent="."]
+[node name="MasterScreen" type="HBoxContainer" parent="."]
 margin_right = 1920.0
 margin_bottom = 1080.0
 rect_min_size = Vector2( 600, 600 )
 
-[node name="Scores" type="HBoxContainer" parent="Vbox"]
-margin_right = 100.0
-margin_bottom = 200.0
-rect_scale = Vector2( 2, 1 )
-
-[node name="Decks" type="VBoxContainer" parent="Vbox"]
-margin_top = 200.0
-margin_right = 100.0
-margin_bottom = 940.0
-rect_scale = Vector2( 2, 1 )
-
-[node name="Playing Area" type="HBoxContainer" parent="Vbox"]
-margin_top = 940.0
-margin_right = 960.0
+[node name="Meta" type="VBoxContainer" parent="MasterScreen"]
 margin_bottom = 1080.0
-rect_scale = Vector2( 2, 1 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MasterScreen/Meta"]
+
+[node name="Scores" type="VBoxContainer" parent="MasterScreen/Meta/MarginContainer2"]
+
+[node name="MarginContainer" type="MarginContainer" parent="MasterScreen/Meta"]
+margin_top = 4.0
+margin_bottom = 4.0
+
+[node name="Decks" type="VBoxContainer" parent="MasterScreen/Meta/MarginContainer"]
+
+[node name="Playing Area" type="VBoxContainer" parent="MasterScreen"]
+margin_left = 4.0
+margin_right = 804.0
+margin_bottom = 1080.0
+
+[node name="ViewportContainer" type="ViewportContainer" parent="MasterScreen/Playing Area"]
+margin_right = 800.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 800, 500 )
+
+[node name="Board" type="Viewport" parent="MasterScreen/Playing Area/ViewportContainer"]
+disable_3d = true
+
+[node name="Hand Margin" type="MarginContainer" parent="MasterScreen/Playing Area"]
+margin_top = 504.0
+margin_right = 800.0
+margin_bottom = 504.0
+
+[node name="Hand Container" type="HBoxContainer" parent="MasterScreen/Playing Area/Hand Margin"]
+margin_right = 800.0
